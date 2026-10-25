@@ -26,7 +26,27 @@ class TestCalculator(unittest.TestCase):
         calc = Calculator()
         result = calc.multiply(3, 0)
         self.assertEqual(result, 0)
-        
-         
+
+    def test_divide_positive(self):
+        calc = Calculator()
+        result = calc.divide(4, 2)
+        self.assertEqual(result, 2)
+
+    def test_divide_negitive(self):
+        calc = Calculator()
+        result = calc.divide(-4, 2)
+        self.assertEqual(result, -2)
+
+    def test_divide_zero(self):
+        calc = Calculator()
+        result = calc.divide(0, 2)
+        self.assertEqual(result, 0)
+
+    def test_divide_nondivisible(self):
+        calc = Calculator()
+        result = calc.divide(5, 2)
+        self.assertEqual(result, 2)                        
+
+
 if __name__ == "__main__":
     unittest.main()
