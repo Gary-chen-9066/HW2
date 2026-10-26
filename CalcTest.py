@@ -48,6 +48,13 @@ class TestCalculator(unittest.TestCase):
         result = calc.divide(5, 2)
         self.assertEqual(result, 2)
 
+    def test_modulo_sign_follows_divisor(self):
+        calc = Calculator()
+        self.assertEqual(calc.modulo(7, 3), 1)
+        self.assertEqual(calc.modulo(-7, 3), 2)
+        self.assertEqual(calc.modulo(7, -3), -2)
+        self.assertEqual(calc.modulo(-7, -3), -1)
+
 
 if __name__ == "__main__":
     unittest.main()
