@@ -1,0 +1,32 @@
+test_add (CalcTest.TestCalculator.test_add) ... ok
+test_divide_negative (CalcTest.TestCalculator.test_divide_negative) ... ok
+test_divide_nondivisible (CalcTest.TestCalculator.test_divide_nondivisible) ... ok
+test_divide_positive (CalcTest.TestCalculator.test_divide_positive) ... ok
+test_divide_zero (CalcTest.TestCalculator.test_divide_zero) ... ok
+test_modulo_by_zero (CalcTest.TestCalculator.test_modulo_by_zero) ... ok
+test_modulo_sign_follows_divisor (CalcTest.TestCalculator.test_modulo_sign_follows_divisor) ... ok
+test_multiply_negative (CalcTest.TestCalculator.test_multiply_negative) ... ok
+test_multiply_positive (CalcTest.TestCalculator.test_multiply_positive) ... ok
+test_multiply_zero (CalcTest.TestCalculator.test_multiply_zero) ... ok
+test_power_negative_exponent (CalcTest.TestCalculator.test_power_negative_exponent) ... ok
+test_power_positive_exponent (CalcTest.TestCalculator.test_power_positive_exponent) ... ok
+test_power_zero_base_negative_exponent (CalcTest.TestCalculator.test_power_zero_base_negative_exponent) ... ERROR
+test_power_zero_exponent (CalcTest.TestCalculator.test_power_zero_exponent) ... ok
+test_subtract (CalcTest.TestCalculator.test_subtract) ... ok
+
+======================================================================
+ERROR: test_power_zero_base_negative_exponent (CalcTest.TestCalculator.test_power_zero_base_negative_exponent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\HW2\CalcTest.py", line 84, in test_power_zero_base_negative_exponent
+    calc.power(0, -1)
+    ~~~~~~~~~~^^^^^^^
+  File "C:\Users\User\Desktop\HW2\Calc.py", line 21, in power
+    return 1 / self.power(a, -b)
+           ~~^~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.002s
+
+FAILED (errors=1)

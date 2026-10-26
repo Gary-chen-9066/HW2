@@ -78,6 +78,11 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calc.power(-2, -1), -0.5)
         self.assertIsInstance(calc.power(1, -1), float)
 
+    def test_power_zero_base_negative_exponent(self):
+        calc = Calculator()
+        with self.assertRaises(ValueError):
+            calc.power(0, -1)
+
 
 if __name__ == "__main__":
     unittest.main()
