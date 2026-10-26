@@ -31,7 +31,8 @@ class TestDedentCharacterization(unittest.TestCase):
         rng = random.Random(4)
         pieces = [" ", "  ", "\t", "x", "yz", "\n", " \n", "\t\n"]
         for _ in range(2000):
-            text = "".join(rng.choice(pieces) for _ in range(rng.randint(0, 20)))
+            n = rng.randint(0, 20)
+            text = "".join(rng.choice(pieces) for _ in range(n))
             with self.subTest(text=text):
                 self.assertEqual(textwrap.dedent(text),
                                  stdlib_textwrap.dedent(text))

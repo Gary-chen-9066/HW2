@@ -11,7 +11,8 @@ class TestWrapBehavior(unittest.TestCase):
         self.assertEqual(textwrap.wrap("aaa bbb", width=6), ["aaa", "bbb"])
 
     def test_long_word_is_broken(self):
-        self.assertEqual(textwrap.wrap("abcdefgh", width=3), ["abc", "def", "gh"])
+        self.assertEqual(textwrap.wrap("abcdefgh", width=3),
+                         ["abc", "def", "gh"])
 
     def test_indent_counts_towards_width(self):
         self.assertEqual(

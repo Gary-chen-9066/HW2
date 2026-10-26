@@ -1,6 +1,7 @@
 import unittest
 from Calc import Calculator  # The class we are going to implement
 
+
 class TestCalculator(unittest.TestCase):
     def test_add(self):
         calc = Calculator()
@@ -15,12 +16,12 @@ class TestCalculator(unittest.TestCase):
     def test_multiply_positive(self):
         calc = Calculator()
         result = calc.multiply(3, 2)
-        self.assertEqual(result, 6)    
+        self.assertEqual(result, 6)
 
     def test_multiply_negative(self):
         calc = Calculator()
         result = calc.multiply(-3, 2)
-        self.assertEqual(result, -6) 
+        self.assertEqual(result, -6)
 
     def test_multiply_zero(self):
         calc = Calculator()
@@ -45,7 +46,7 @@ class TestCalculator(unittest.TestCase):
     def test_divide_nondivisible(self):
         calc = Calculator()
         result = calc.divide(5, 2)
-        self.assertEqual(result, 2)                        
+        self.assertEqual(result, 2)
 
 
 if __name__ == "__main__":

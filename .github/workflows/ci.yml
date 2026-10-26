@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install verification tools
+        run: pip install -r requirements-dev.txt
+
+      - name: Static analysis (flake8)
+        run: flake8 Calc.py CalcTest.py q7 q4_refactor/test_dedent.py q5_fault/test_textwrap_fault.py
+
+      - name: Unit tests with coverage
+        run: coverage run --branch -m unittest -v CalcTest q7.test_properties q4_refactor.test_dedent q5_fault.test_textwrap_fault
+
+      - name: Coverage report (Calc must be 100% covered)
+        run: |
+          coverage report -m
+          coverage report --include=Calc.py --fail-under=100

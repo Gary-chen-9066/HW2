@@ -1,0 +1,11 @@
+Calc.py:4:1: W293 blank line contains whitespace
+Calc.py:9:19: W291 trailing whitespace
+Calc.py:12:20: W291 trailing whitespace
+Calc.py:12:24: W292 no newline at end of file
+CalcTest.py:4:1: E302 expected 2 blank lines, found 1
+CalcTest.py:18:36: W291 trailing whitespace
+CalcTest.py:23:37: W291 trailing whitespace
+CalcTest.py:48:36: W291 trailing whitespace
+CalcTest.py:52:20: W292 no newline at end of file
+q4_refactor/test_dedent.py:34:80: E501 line too long (81 > 79 characters)
+q5_fault/test_textwrap_fault.py:14:80: E501 line too long (82 > 79 characters)
