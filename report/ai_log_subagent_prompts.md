@@ -15,6 +15,15 @@ Your working directory is C:/Users/User/AppData/Local/Temp/claude/c--Users-User-
 It contains a Python test file, CalcTest.py. Write Calc.py in that directory so that all the tests pass. Run the tests with `python -m unittest -v CalcTest` from that directory and show the output. In your final reply, include the full contents of the Calc.py you wrote and briefly explain your implementation.
 ```
 
+## Q2:新 agent 讓失敗的 CI 通過(沒告訴它改了什麼)
+提供的資料夾內容:`q2-break-build` 分支 commit f2e7378 的檔案(`git archive` 匯出,沒有 `.git`)。
+
+```
+Your working directory is C:/Users/User/AppData/Local/Temp/claude/c--Users-User-Desktop-HW2/8f804386-ee85-4607-b643-954bb16eb107/scratchpad/q2_agent . Work only inside that directory.
+
+It is a small Python project. Its CI build (GitHub Actions, see .github/workflows/ci.yml) is failing. Please make the build pass. In your final reply, explain what was wrong, exactly which files you changed and why, and include the full diff of your changes.
+```
+
 ## Q5:新 agent 修復植入 textwrap 的故障
 提供的資料夾內容:含植入故障的 `textwrap.py`(commit d824395)。沒有測試,也沒有 git 歷史。
 

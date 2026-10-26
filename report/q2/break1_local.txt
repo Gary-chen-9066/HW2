@@ -1,0 +1,14 @@
+.........F
+======================================================================
+FAIL: test_subtract (CalcTest.TestCalculator.test_subtract)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\HW2\CalcTest.py", line 14, in test_subtract
+    self.assertEqual(result, 3)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+AssertionError: -3 != 3
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.002s
+
+FAILED (failures=1)
