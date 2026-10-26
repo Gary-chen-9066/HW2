@@ -17,7 +17,7 @@ class TestCalculator(unittest.TestCase):
         result = calc.multiply(3, 2)
         self.assertEqual(result, 6)    
 
-    def test_multiply_negitive(self):
+    def test_multiply_negative(self):
         calc = Calculator()
         result = calc.multiply(-3, 2)
         self.assertEqual(result, -6) 
@@ -32,7 +32,7 @@ class TestCalculator(unittest.TestCase):
         result = calc.divide(4, 2)
         self.assertEqual(result, 2)
 
-    def test_divide_negitive(self):
+    def test_divide_negative(self):
         calc = Calculator()
         result = calc.divide(-4, 2)
         self.assertEqual(result, -2)
