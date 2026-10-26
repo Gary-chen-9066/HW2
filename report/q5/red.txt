@@ -1,0 +1,68 @@
+test_exact_fit_fill (q5_fault.test_textwrap_fault.TestWrapBehavior.test_exact_fit_fill) ... FAIL
+test_exact_fit_is_one_line (q5_fault.test_textwrap_fault.TestWrapBehavior.test_exact_fit_is_one_line) ... FAIL
+test_indent_counts_towards_width (q5_fault.test_textwrap_fault.TestWrapBehavior.test_indent_counts_towards_width) ... ok
+test_long_word_is_broken (q5_fault.test_textwrap_fault.TestWrapBehavior.test_long_word_is_broken) ... ok
+test_short_text_is_one_line (q5_fault.test_textwrap_fault.TestWrapBehavior.test_short_text_is_one_line) ... ok
+test_shorten_exact_fit (q5_fault.test_textwrap_fault.TestWrapBehavior.test_shorten_exact_fit) ... FAIL
+test_text_too_long_is_split (q5_fault.test_textwrap_fault.TestWrapBehavior.test_text_too_long_is_split) ... ok
+
+======================================================================
+FAIL: test_exact_fit_fill (q5_fault.test_textwrap_fault.TestWrapBehavior.test_exact_fit_fill)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\HW2\q5_fault\test_textwrap_fault.py", line 26, in test_exact_fit_fill
+    self.assertEqual(textwrap.fill("aaa bbb ccc ddd", width=7),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     "aaa bbb\nccc ddd")
+                     ^^^^^^^^^^^^^^^^^^^
+AssertionError: 'aaa\nbbb\nccc\nddd' != 'aaa bbb\nccc ddd'
++ aaa bbb
++ ccc ddd
+- aaa
+- bbb
+- ccc
+- ddd
+
+
+======================================================================
+FAIL: test_exact_fit_is_one_line (q5_fault.test_textwrap_fault.TestWrapBehavior.test_exact_fit_is_one_line)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\HW2\q5_fault\test_textwrap_fault.py", line 23, in test_exact_fit_is_one_line
+    self.assertEqual(textwrap.wrap("aaa bbb", width=7), ["aaa bbb"])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['aaa', 'bbb'] != ['aaa bbb']
+
+First differing element 0:
+'aaa'
+'aaa bbb'
+
+First list contains 1 additional elements.
+First extra element 1:
+'bbb'
+
+- ['aaa', 'bbb']
+?      ^^^^
+
++ ['aaa bbb']
+?      ^
+
+
+======================================================================
+FAIL: test_shorten_exact_fit (q5_fault.test_textwrap_fault.TestWrapBehavior.test_shorten_exact_fit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\HW2\q5_fault\test_textwrap_fault.py", line 31, in test_shorten_exact_fit
+    self.assertEqual(textwrap.shorten("Hello  world!", width=12),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     "Hello world!")
+                     ^^^^^^^^^^^^^^^
+AssertionError: 'Hello [...]' != 'Hello world!'
+- Hello [...]
++ Hello world!
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=3)
