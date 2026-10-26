@@ -17,6 +17,8 @@ class Calculator:
         return a % b
 
     def power(self, a, b):
+        if b < 0:
+            return 1 / self.power(a, -b)
         result = 1
         for _ in range(b):
             result = self.multiply(result, a)
