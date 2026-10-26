@@ -429,11 +429,18 @@ def dedent(text):
 
     Entirely blank lines are normalized to a newline character.
     """
-    # Look for the longest leading string of spaces and tabs common to
-    # all lines.
-    margin = None
     text = _whitespace_only_re.sub('', text)
-    indents = _leading_whitespace_re.findall(text)
+    margin = _common_margin(_leading_whitespace_re.findall(text))
+    if margin:
+        text = re.sub(r'(?m)^' + margin, '', text)
+    return text
+
+
+def _common_margin(indents):
+    """Return the longest leading string of spaces and tabs common to
+    all of 'indents', or None if 'indents' is empty.
+    """
+    margin = None
     for indent in indents:
         if margin is None:
             margin = indent
@@ -455,16 +462,7 @@ def dedent(text):
                 if x != y:
                     margin = margin[:i]
                     break
-
-    # sanity check (testing/debugging only)
-    if 0 and margin:
-        for line in text.split("\n"):
-            assert not line or line.startswith(margin), \
-                   "line = %r, margin = %r" % (line, margin)
-
-    if margin:
-        text = re.sub(r'(?m)^' + margin, '', text)
-    return text
+    return margin
 
 
 def indent(text, prefix, predicate=None):
