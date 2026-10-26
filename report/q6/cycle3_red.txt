@@ -1,0 +1,26 @@
+test_add (CalcTest.TestCalculator.test_add) ... ok
+test_divide_negative (CalcTest.TestCalculator.test_divide_negative) ... ok
+test_divide_nondivisible (CalcTest.TestCalculator.test_divide_nondivisible) ... ok
+test_divide_positive (CalcTest.TestCalculator.test_divide_positive) ... ok
+test_divide_zero (CalcTest.TestCalculator.test_divide_zero) ... ok
+test_modulo_by_zero (CalcTest.TestCalculator.test_modulo_by_zero) ... ok
+test_modulo_sign_follows_divisor (CalcTest.TestCalculator.test_modulo_sign_follows_divisor) ... ok
+test_multiply_negative (CalcTest.TestCalculator.test_multiply_negative) ... ok
+test_multiply_positive (CalcTest.TestCalculator.test_multiply_positive) ... ok
+test_multiply_zero (CalcTest.TestCalculator.test_multiply_zero) ... ok
+test_power_zero_exponent (CalcTest.TestCalculator.test_power_zero_exponent) ... ERROR
+test_subtract (CalcTest.TestCalculator.test_subtract) ... ok
+
+======================================================================
+ERROR: test_power_zero_exponent (CalcTest.TestCalculator.test_power_zero_exponent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\HW2\CalcTest.py", line 65, in test_power_zero_exponent
+    self.assertEqual(calc.power(0, 0), 1)
+                     ^^^^^^^^^^
+AttributeError: 'Calculator' object has no attribute 'power'
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.002s
+
+FAILED (errors=1)

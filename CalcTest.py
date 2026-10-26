@@ -60,6 +60,11 @@ class TestCalculator(unittest.TestCase):
         with self.assertRaises(ValueError):
             calc.modulo(7, 0)
 
+    def test_power_zero_exponent(self):
+        calc = Calculator()
+        self.assertEqual(calc.power(0, 0), 1)
+        self.assertEqual(calc.power(5, 0), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
