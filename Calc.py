@@ -18,6 +18,8 @@ class Calculator:
 
     def power(self, a, b):
         if b < 0:
+            if a == 0:
+                raise ValueError("zero to a negative power")
             return 1 / self.power(a, -b)
         result = 1
         for _ in range(b):
