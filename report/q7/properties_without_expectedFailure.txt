@@ -1,0 +1,23 @@
+test_add_is_commutative (q7._raw_props.TestCalculatorProperties.test_add_is_commutative) ... ok
+test_divide_is_floor_of_exact_quotient (q7._raw_props.TestCalculatorProperties.test_divide_is_floor_of_exact_quotient) ... ok
+test_divide_negation_symmetry (q7._raw_props.TestCalculatorProperties.test_divide_negation_symmetry) ... FAIL
+test_divide_undoes_multiply (q7._raw_props.TestCalculatorProperties.test_divide_undoes_multiply) ... ok
+test_multiply_is_commutative (q7._raw_props.TestCalculatorProperties.test_multiply_is_commutative) ... ok
+test_multiply_is_repeated_add (q7._raw_props.TestCalculatorProperties.test_multiply_is_repeated_add) ... ok
+test_subtract_undoes_add (q7._raw_props.TestCalculatorProperties.test_subtract_undoes_add) ... ok
+
+======================================================================
+FAIL: test_divide_negation_symmetry (q7._raw_props.TestCalculatorProperties.test_divide_negation_symmetry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\Desktop\HW2\q7\_raw_props.py", line 64, in test_divide_negation_symmetry
+    self.assertEqual(self.calc.divide(-a, b), -self.calc.divide(a, b),
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     msg=f"a={a}, b={b}")
+                     ^^^^^^^^^^^^^^^^^^^^
+AssertionError: -3 != -2 : a=-750188, b=-329993
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.014s
+
+FAILED (failures=1)

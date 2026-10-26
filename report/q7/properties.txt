@@ -1,0 +1,12 @@
+test_add_is_commutative (q7.test_properties.TestCalculatorProperties.test_add_is_commutative) ... ok
+test_divide_is_floor_of_exact_quotient (q7.test_properties.TestCalculatorProperties.test_divide_is_floor_of_exact_quotient) ... ok
+test_divide_negation_symmetry (q7.test_properties.TestCalculatorProperties.test_divide_negation_symmetry) ... expected failure
+test_divide_undoes_multiply (q7.test_properties.TestCalculatorProperties.test_divide_undoes_multiply) ... ok
+test_multiply_is_commutative (q7.test_properties.TestCalculatorProperties.test_multiply_is_commutative) ... ok
+test_multiply_is_repeated_add (q7.test_properties.TestCalculatorProperties.test_multiply_is_repeated_add) ... ok
+test_subtract_undoes_add (q7.test_properties.TestCalculatorProperties.test_subtract_undoes_add) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.013s
+
+OK (expected failures=1)
