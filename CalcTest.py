@@ -65,6 +65,12 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calc.power(0, 0), 1)
         self.assertEqual(calc.power(5, 0), 1)
 
+    def test_power_positive_exponent(self):
+        calc = Calculator()
+        self.assertEqual(calc.power(2, 3), 8)
+        self.assertEqual(calc.power(-2, 3), -8)
+        self.assertEqual(calc.power(0, 2), 0)
+
 
 if __name__ == "__main__":
     unittest.main()
