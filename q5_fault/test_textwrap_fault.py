@@ -27,6 +27,12 @@ class TestWrapBehavior(unittest.TestCase):
         self.assertEqual(textwrap.fill("aaa bbb ccc ddd", width=7),
                          "aaa bbb\nccc ddd")
 
+    # Added after the Q5 agent found it: on the faulty code a chunk exactly
+    # 'width' long fit on no line and was not "long", so wrap() never ended.
+    def test_word_exactly_width_long(self):
+        self.assertEqual(textwrap.wrap("abcdefghij", width=5),
+                         ["abcde", "fghij"])
+
     def test_shorten_exact_fit(self):
         # Example from the shorten() docstring.
         self.assertEqual(textwrap.shorten("Hello  world!", width=12),

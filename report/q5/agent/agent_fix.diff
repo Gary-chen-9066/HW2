@@ -1,0 +1,11 @@
+--- C:/Users/User/AppData/Local/Temp/claude/c--Users-User-Desktop-HW2/8f804386-ee85-4607-b643-954bb16eb107/scratchpad/q5_agent/textwrap.py.orig	2026-10-26 08:12:55.919276400 +0800
++++ C:/Users/User/AppData/Local/Temp/claude/c--Users-User-Desktop-HW2/8f804386-ee85-4607-b643-954bb16eb107/scratchpad/q5_agent/textwrap.py	2026-10-26 08:15:14.531105900 +0800
+@@ -288,7 +288,7 @@
+                 l = len(chunks[-1])
+ 
+                 # Can at least squeeze this chunk onto the current line.
+-                if cur_len + l < width:
++                if cur_len + l <= width:
+                     cur_line.append(chunks.pop())
+                     cur_len += l
+ 
