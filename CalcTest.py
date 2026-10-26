@@ -55,6 +55,11 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calc.modulo(7, -3), -2)
         self.assertEqual(calc.modulo(-7, -3), -1)
 
+    def test_modulo_by_zero(self):
+        calc = Calculator()
+        with self.assertRaises(ValueError):
+            calc.modulo(7, 0)
+
 
 if __name__ == "__main__":
     unittest.main()
