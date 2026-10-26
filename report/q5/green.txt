@@ -1,0 +1,12 @@
+test_exact_fit_fill (q5_fault.test_textwrap_fault.TestWrapBehavior.test_exact_fit_fill) ... ok
+test_exact_fit_is_one_line (q5_fault.test_textwrap_fault.TestWrapBehavior.test_exact_fit_is_one_line) ... ok
+test_indent_counts_towards_width (q5_fault.test_textwrap_fault.TestWrapBehavior.test_indent_counts_towards_width) ... ok
+test_long_word_is_broken (q5_fault.test_textwrap_fault.TestWrapBehavior.test_long_word_is_broken) ... ok
+test_short_text_is_one_line (q5_fault.test_textwrap_fault.TestWrapBehavior.test_short_text_is_one_line) ... ok
+test_shorten_exact_fit (q5_fault.test_textwrap_fault.TestWrapBehavior.test_shorten_exact_fit) ... ok
+test_text_too_long_is_split (q5_fault.test_textwrap_fault.TestWrapBehavior.test_text_too_long_is_split) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK
